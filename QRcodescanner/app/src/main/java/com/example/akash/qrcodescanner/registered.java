@@ -7,10 +7,12 @@ import android.widget.Toast;
 
 public class registered extends AppCompatActivity {
 
+    SQLiteDatabase mDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registered);
+
 
 
         Database database = new Database(this);

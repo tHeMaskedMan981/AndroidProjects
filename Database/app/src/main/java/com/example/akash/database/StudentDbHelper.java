@@ -19,6 +19,7 @@ public class StudentDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("CREATE TABLE teamInfo (name text, village text, gender text, speciality text)");
+        db.execSQL("CREATE TABLE tailedBeasts (beasts text)");
 
 
     }
@@ -32,6 +33,7 @@ public class StudentDbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
         db.execSQL("drop table if exists teamInfo");
+        db.execSQL("drop table if exists tailedBeasts");
         onCreate(db);
 
     }
